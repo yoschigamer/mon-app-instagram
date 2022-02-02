@@ -28,7 +28,6 @@ puppeteer.use(StealthPlugin());
   await page.goto('https://www.instagram.com/', {
     waitUntil: 'networkidle2'}),
   
-  await page.click('._1XyCr > button');
   await page.type("[name=username]", process.env.IDENTIFIANT,{
     delay: 100});
   await page.type("[name=password]", process.env.MDP,{
