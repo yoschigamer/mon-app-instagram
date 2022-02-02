@@ -23,6 +23,7 @@ puppeteer.use(StealthPlugin());
     executablePath: './node_modules/puppeteer/.local-chromium/linux-950341/chrome-linux/chrome'
   });
   const page = await browser.newPage();
+  await page.setViewport({width: 1200, height: 1500});
   await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36');
   await page.goto('https://www.instagram.com/', {
     waitUntil: 'networkidle2'}),
