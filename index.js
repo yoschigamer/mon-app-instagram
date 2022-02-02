@@ -32,7 +32,6 @@ puppeteer.use(StealthPlugin());
     delay: 100});
   await page.type("[name=password]", process.env.MDP,{
     delay: 100});
-
   await Promise.all([
     page.click('button[type=submit]'),
   ]); 
